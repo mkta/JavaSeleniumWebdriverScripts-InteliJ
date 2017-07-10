@@ -12,10 +12,9 @@ public class Lesson1 {
     public static void main(String[] args)
 
     {
+        System.out.println("Bambucea");
+        System.out.println("Bambucea2");
 
-/*metoda println()tipăreşte întregul număr la ieşire şi trece în rând nou*/
-
-        System.out.println(2 + 3);
     }
 }
 
