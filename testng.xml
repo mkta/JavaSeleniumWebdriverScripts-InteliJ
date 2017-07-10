@@ -5,7 +5,7 @@
         <classes>
             <!--class name="Desi_FE_LOOP_Script.DesiFELOOPTest"/-->
             <!-- LINUX EST-->
-            <class name="JenkinsLinuxCodeTest"/>
+            <!--<class name="JenkinsLinuxCodeTest"/>-->
             <!-- LINUX EST-->
         </classes>
     </test>
