@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Main Test Suite" verbose="2">
+    <test name="TestNG Test Group">
+        <classes>
+            <!--class name="Desi_FE_LOOP_Script.DesiFELOOPTest"/-->
+            <!-- LINUX EST-->
+            <class name="JenkinsLinuxCodeTest"/>
+            <!-- LINUX EST-->
+        </classes>
+    </test>
+</suite>

@@ -1,0 +1,164 @@
+<!-- new varinat -->
+<product code="DLC0000368" index="12" quantity="0">
+    <name>Demetria Sleeveless Chain-Trim Silk Dress Navy Size 14</name>
+    <type>DRESS</type>
+    <brand tag="ELT"/>
+    <hierarchy>
+        <category tag="WOMEN"/>
+        <category tag="DRESS"/>
+    </hierarchy>
+    <properties>
+        <property tag="SIZE_GROUP">
+            <value>Women</value>
+        </property>
+        <property tag="SIZE">
+            <value>12</value>
+        </property>
+        <property tag="COLOUR">
+            <value>Navy</value>
+            <extendedValue>{"type":"rgb", "htmlRGB": "#03032D"}</extendedValue>
+        </property>
+        <property tag="RRP">
+            <value>298</value>
+        </property>
+        <property tag="WEIGHT_UNIT">
+            <value>kg</value>
+        </property>
+        <property tag="WEIGHT">
+            <value>1</value>
+        </property>
+        <property tag="DESCRIPTION">
+            <value>"Demetria" gathered silk chiffon dress by Elie Tahari.
+                Delicate silvertone chain trim at neckline and hem.
+                High jewel neckline.
+                Sleeveless; cut-in shoulders.
+                A-line silhouette.
+                Scalloped, fringed hem.
+                Concealed back zip.
+                Dry clean.
+                Imported.
+                About Elie Tahari:
+                New York-based designer Elie Tahari first made his self-named line famous in the 1970s, when he
+                perfectly captured the disco aesthetic. Over the years, the designer's style has evolved into clean
+                lines and expert cuts on expertly tailored modern looks for men and women.
+
+            </value>
+        </property>
+        <property tag="SHORT_DESCRIPTION">
+            <value>"Demetria" gathered silk chiffon dress by Elie Tahari.
+            </value>
+        </property>
+        <property tag="TEASER">
+            <value>"Demetria" gathered silk chiffon dress by Elie Tahari.
+            </value>
+        </property>
+    </properties>
+    <set_assets assest_name="Demetria Sleeveless Chain-Trim Silk Dress LightBrown Size 4">
+        <asset copy="true" size="STANDARD"
+               url="http://bergdorfgoodman.scene7.com/is/image/bergdorfgoodman/BGTUWR7_41_m"/>
+        <asset copy="true" size="THUMB"
+               url="http://bergdorfgoodman.scene7.com/is/image/bergdorfgoodman/BGTUWR7_41_m"/>
+        <asset copy="true" size="LARGE"
+               url="http://bergdorfgoodman.scene7.com/is/image/bergdorfgoodman/BGTUWR7_41_m"/>
+    </set_assets>
+    <set_assets assest_name="Demetria Sleeveless Chain-Trim Silk Dress LightBrown Size 4 2">
+        <asset copy="true" size="STANDARD"
+               url="http://bergdorfgoodman.scene7.com/is/image/bergdorfgoodman/BGTUWR7_41_a"/>
+        <asset copy="true" size="THUMB"
+               url="http://bergdorfgoodman.scene7.com/is/image/bergdorfgoodman/BGTUWR7_41_a"/>
+        <asset copy="true" size="LARGE"
+               url="http://bergdorfgoodman.scene7.com/is/image/bergdorfgoodman/BGTUWR7_41_a"/>
+    </set_assets>
+    <set_assets assest_name="Demetria Sleeveless Chain-Trim Silk Dress LightBrown Size 4 3">
+        <asset copy="true" size="STANDARD"
+               url="http://images.bergdorfgoodman.com/ca/3/product_assets/T/U/W/R/7/BGTUWR7_zu.jpg"/>
+        <asset copy="true" size="THUMB"
+               url="http://images.bergdorfgoodman.com/ca/3/product_assets/T/U/W/R/7/BGTUWR7_zu.jpg"/>
+        <asset copy="true" size="LARGE"
+               url="http://images.bergdorfgoodman.com/ca/3/product_assets/T/U/W/R/7/BGTUWR7_zu.jpg"/>
+    </set_assets>
+
+    <offerings>
+        <offering code="DLC0000368">
+            <name>Demetria Sleeveless Chain-Trim Silk Dress Navy Size 14</name>
+            <type>PRODUCT</type>
+            <products>
+                <prod_ref code="DLC0000368" index="0" quantity="1"/>
+            </products>
+            <properties>
+                <!-- REQUIRED PROPERTIES -->
+                <property tag="OFFERING_AVAILABILITY">
+                    <value>IN_STOCK_OVERRIDE</value>
+                    <index>0</index>
+                </property>
+                <property tag="USERFRIENDLY_ID">
+                    <value>demetria_sleeveless_chain-trim_silk_dress_navy_size_14</value>
+                    <index>0</index>
+                </property>
+            </properties>
+            <price_lists>
+                <price_list id="DLC_US_PL" siteId="DLC_US_ONLINE">
+                    <offering_prices code="DLC0000368">
+                        <offering_price type="SALEPRICE" currency="USD" net="298"/>
+                        <offering_price type="WAS" currency="USD" net="498"/>
+                    </offering_prices>
+                </price_list>
+                <price_list id="DLC_JP_PL" siteId="DLC_JP_ONLINE">
+                    <offering_prices code="DLC0000368">
+                        <offering_price type="SALEPRICE" currency="JPY" net="32768.08"/>
+                        <offering_price type="WAS" currency="JPY" net="54760.08"/>
+                    </offering_prices>
+                </price_list>
+            </price_lists>
+        </offering>
+    </offerings>
+</product>
+
+
+<property tag="DESCRIPTION">
+<value>"Demetria" gathered silk chiffon dress by Elie Tahari.
+    Delicate silvertone chain trim at neckline and hem.
+    High jewel neckline.
+    Sleeveless; cut-in shoulders.
+    A-line silhouette.
+    Scalloped, fringed hem.
+    Concealed back zip.
+    Dry clean.
+    Imported.
+    About Elie Tahari:
+    New York-based designer Elie Tahari first made his self-named line famous in the 1970s, when he
+    perfectly captured the disco aesthetic. Over the years, the designer's style has evolved into
+    clean
+    lines and expert cuts on expertly tailored modern looks for men and women.
+
+</value>
+<value lang="jp">"Demetria"はElie Tahariのシルクシフォンドレスを集めました。
+         ネックラインと裾に繊細なシルバートーンチェーントリム。
+         ハイジュエリーネックライン。
+         ノースリーブ; カットインショルダー。
+         ラインのシルエット。
+         スカラップ、縞模様の裾。
+         隠された背中のジップ。
+         ドライクリーニング。
+         輸入された。
+         Elie Tahariについて：
+         ニューヨークに拠点を置くデザイナーのエリー・タハリは、1970年代にはじめて彼自身の名前のついたラインを作りました。
+         ディスコの美しさを完全に捉えました。 長年にわたり、デザイナーのスタイルは
+         クリーン
+         男性と女性のための巧みに仕立てられたモダンなルックスのラインと専門家のカット。
+</value>
+
+<value>An artisanal mix of color and texture enlivens a stretch-cotton mini with bright floral
+    embroidery down the side and variegated studs along the edges.
+</value>
+<value lang="jp">色と質感のアーティファラルなミックスは、ストレッチコットンのミニを明るい花で盛り上げます
+         サイドに刺繍が施され、縁に沿って多彩なスタッドが施されています。
+</value>
+
+
+    <value>Straight silhouette with an easy, relaxed fit
+    </value>
+    <value lang="jp">簡単でリラックスしたフィット感のストレートシルエット
+    </value>
+        <!-- variant 1 -->
+
