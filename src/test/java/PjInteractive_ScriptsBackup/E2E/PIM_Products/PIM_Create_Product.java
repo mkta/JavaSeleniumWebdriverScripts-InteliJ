@@ -1,4 +1,4 @@
-package PjInteractive_ScriptsBackuo.E2E.PIM_Products;
+package PjInteractive_ScriptsBackup.E2E.PIM_Products;
 
 import com.google.common.base.Function;
 import org.junit.Test;
@@ -20,9 +20,9 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
-import static PjInteractive_ScriptsBackuo.E2E.PIM_Products.PIM_ProductConfigs.*;
-import static PjInteractive_ScriptsBackuo.E2E.PIM_Products.PIM_ProductEmails.*;
-import static PjInteractive_ScriptsBackuo.E2E.PIM_Products.PIM_ProductxPaths.*;
+import static PjInteractive_ScriptsBackup.E2E.PIM_Products.PIM_ProductConfigs.*;
+import static PjInteractive_ScriptsBackup.E2E.PIM_Products.PIM_ProductEmails.*;
+import static PjInteractive_ScriptsBackup.E2E.PIM_Products.PIM_ProductxPaths.*;
 
 /**
  * Created by catalinf on 05-Apr-17. ss

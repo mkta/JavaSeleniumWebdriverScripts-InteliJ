@@ -1,4 +1,4 @@
-package PjInteractive_ScriptsBackuo.E2E.PIM_Products;
+package PjInteractive_ScriptsBackup.E2E.PIM_Products;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
@@ -22,7 +22,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
-import static PjInteractive_ScriptsBackuo.E2E.PIM_Products.PIM_ProductConfigs.*;
+import static PjInteractive_ScriptsBackup.E2E.PIM_Products.PIM_ProductConfigs.*;
 
 /**
  * Created by catalinf on 07-Apr-17

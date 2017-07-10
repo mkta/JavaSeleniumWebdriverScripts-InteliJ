@@ -1,4 +1,4 @@
-package PjInteractive_ScriptsBackuo.E2E.PIM_Products;
+package PjInteractive_ScriptsBackup.E2E.PIM_Products;
 
 /**
  * Created by catalinf on 07-Apr-17
