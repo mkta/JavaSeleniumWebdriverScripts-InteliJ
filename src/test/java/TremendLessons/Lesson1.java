@@ -1,7 +1,5 @@
-package TrementLessons;
+package TremendLessons;
 
-
-import org.testng.annotations.Test;
 
 /**
  * Created by catal on 10-Jul-17.
