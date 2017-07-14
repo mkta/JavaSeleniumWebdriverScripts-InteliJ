@@ -3,10 +3,7 @@
 <suite name="Main Test Suite" verbose="2">
     <test name="TestNG Test Group">
         <classes>
-            <!--class name="Desi_FE_LOOP_Script.DesiFELOOPTest"/-->
-            <!-- LINUX EST-->
-            <!--<class name="JenkinsLinuxCodeTest"/>-->
-            <!-- LINUX EST-->
+            <class name="TremendLessons.Lesson1"/>
         </classes>
     </test>
 </suite>
