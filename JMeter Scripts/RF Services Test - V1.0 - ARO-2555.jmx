@@ -1,0 +1,643 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="3.2" jmeter="3.2 r1790748">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Raiffeisen Athena" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="ARO-2555" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <longProp name="ThreadGroup.start_time">1473160502000</longProp>
+        <longProp name="ThreadGroup.end_time">1473160502000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="Settings - Variables" enabled="true">
+          <collectionProp name="Arguments.arguments">
+            <elementProp name="ENV" elementType="Argument">
+              <stringProp name="Argument.name">ENV</stringProp>
+              <stringProp name="Argument.value">test</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+              <stringProp name="Argument.desc">dev or test</stringProp>
+            </elementProp>
+            <elementProp name="------------------------------------------" elementType="Argument">
+              <stringProp name="Argument.name">------------------------------------------</stringProp>
+              <stringProp name="Argument.value">------------------------------------------</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="username" elementType="Argument">
+              <stringProp name="Argument.name">username</stringProp>
+              <stringProp name="Argument.value">vn-84-vly</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="password" elementType="Argument">
+              <stringProp name="Argument.name">password</stringProp>
+              <stringProp name="Argument.value">test1234</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="------------------------------------------" elementType="Argument">
+              <stringProp name="Argument.name">------------------------------------------</stringProp>
+              <stringProp name="Argument.value">------------------------------------------</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="accIDcustom" elementType="Argument">
+              <stringProp name="Argument.name">accIDcustom</stringProp>
+              <stringProp name="Argument.value">0013460268</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+              <stringProp name="Argument.desc">Account number for variaus calls</stringProp>
+            </elementProp>
+            <elementProp name="accTypecustom" elementType="Argument">
+              <stringProp name="Argument.name">accTypecustom</stringProp>
+              <stringProp name="Argument.value">20</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="pageSize" elementType="Argument">
+              <stringProp name="Argument.name">pageSize</stringProp>
+              <stringProp name="Argument.value">9999</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="------------------------------------------" elementType="Argument">
+              <stringProp name="Argument.name">------------------------------------------</stringProp>
+              <stringProp name="Argument.value">------------------------------------------</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="testIBAN" elementType="Argument">
+              <stringProp name="Argument.name">testIBAN</stringProp>
+              <stringProp name="Argument.value">RO49AAAA1B31007593840000</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="------------------------------------------" elementType="Argument">
+              <stringProp name="Argument.name">------------------------------------------</stringProp>
+              <stringProp name="Argument.value">------------------------------------------</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="fromCurrency" elementType="Argument">
+              <stringProp name="Argument.name">fromCurrency</stringProp>
+              <stringProp name="Argument.value">RON</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="toCurrency" elementType="Argument">
+              <stringProp name="Argument.name">toCurrency</stringProp>
+              <stringProp name="Argument.value">EUR</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="------------------------------------------" elementType="Argument">
+              <stringProp name="Argument.name">------------------------------------------</stringProp>
+              <stringProp name="Argument.value">------------------------------------------</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="BIC_CODE" elementType="Argument">
+              <stringProp name="Argument.name">BIC_CODE</stringProp>
+              <stringProp name="Argument.value">RZBRROBU</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="------------------------------------------" elementType="Argument">
+              <stringProp name="Argument.name">------------------------------------------</stringProp>
+              <stringProp name="Argument.value">------------------------------------------</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="paymentIBAN_FROM" elementType="Argument">
+              <stringProp name="Argument.name">paymentIBAN_FROM</stringProp>
+              <stringProp name="Argument.value">RO16RZBR0000010011532971</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="paymentIBAN_TO" elementType="Argument">
+              <stringProp name="Argument.name">paymentIBAN_TO</stringProp>
+              <stringProp name="Argument.value">RO63RZBR0000060005161502</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="paymentCurrency" elementType="Argument">
+              <stringProp name="Argument.name">paymentCurrency</stringProp>
+              <stringProp name="Argument.value">RON</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="paymentCurrency_FROM" elementType="Argument">
+              <stringProp name="Argument.name">paymentCurrency_FROM</stringProp>
+              <stringProp name="Argument.value">RON</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="paymentCurrency_TO" elementType="Argument">
+              <stringProp name="Argument.name">paymentCurrency_TO</stringProp>
+              <stringProp name="Argument.value">EUR</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="paymentActionID" elementType="Argument">
+              <stringProp name="Argument.name">paymentActionID</stringProp>
+              <stringProp name="Argument.value">0003</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="paymentAmount" elementType="Argument">
+              <stringProp name="Argument.name">paymentAmount</stringProp>
+              <stringProp name="Argument.value">1.0</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="paymentCif_Payer" elementType="Argument">
+              <stringProp name="Argument.name">paymentCif_Payer</stringProp>
+              <stringProp name="Argument.value">0002052120</stringProp>
+              <stringProp name="Argument.desc">&quot;0002052120 - vn-84-vly&quot;</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="paymentDetails" elementType="Argument">
+              <stringProp name="Argument.name">paymentDetails</stringProp>
+              <stringProp name="Argument.value">Jmeter Payment Details</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="paymentPayerFullName" elementType="Argument">
+              <stringProp name="Argument.name">paymentPayerFullName</stringProp>
+              <stringProp name="Argument.value">VALENTIN CONDREA</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="paymentDate" elementType="Argument">
+              <stringProp name="Argument.name">paymentDate</stringProp>
+              <stringProp name="Argument.value">2017-09-22</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="------------------------------------------" elementType="Argument">
+              <stringProp name="Argument.name">------------------------------------------</stringProp>
+              <stringProp name="Argument.value">------------------------------------------</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="wuMTCN" elementType="Argument">
+              <stringProp name="Argument.name">wuMTCN</stringProp>
+              <stringProp name="Argument.value">1413412414</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="wuAccount" elementType="Argument">
+              <stringProp name="Argument.name">wuAccount</stringProp>
+              <stringProp name="Argument.value">0005161502</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="wuAccountType" elementType="Argument">
+              <stringProp name="Argument.name">wuAccountType</stringProp>
+              <stringProp name="Argument.value">20</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="wuExpectedAmount" elementType="Argument">
+              <stringProp name="Argument.name">wuExpectedAmount</stringProp>
+              <stringProp name="Argument.value">563.00</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="wuExpectedCurrency" elementType="Argument">
+              <stringProp name="Argument.name">wuExpectedCurrency</stringProp>
+              <stringProp name="Argument.value">RON</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="wuOriginationCountry" elementType="Argument">
+              <stringProp name="Argument.name">wuOriginationCountry</stringProp>
+              <stringProp name="Argument.value">GER</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="wuProductId" elementType="Argument">
+              <stringProp name="Argument.name">wuProductId</stringProp>
+              <stringProp name="Argument.value">547</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="------------------------------------------" elementType="Argument">
+              <stringProp name="Argument.name">------------------------------------------</stringProp>
+              <stringProp name="Argument.value">------------------------------------------</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+          </collectionProp>
+        </Arguments>
+        <hashTree/>
+        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="Envioroment vatriables" enabled="true">
+          <collectionProp name="Arguments.arguments">
+            <elementProp name="URLvar" elementType="Argument">
+              <stringProp name="Argument.name">URLvar</stringProp>
+              <stringProp name="Argument.value">http://ro-${ENV}.rbro.rbg.cc</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="WSvar" elementType="Argument">
+              <stringProp name="Argument.name">WSvar</stringProp>
+              <stringProp name="Argument.value">ro-${ENV}.rbro.rbg.cc</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+          </collectionProp>
+        </Arguments>
+        <hashTree/>
+        <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+          <collectionProp name="HeaderManager.headers">
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Content-Type</stringProp>
+              <stringProp name="Header.value">application/json;charset=utf-8</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Host</stringProp>
+              <stringProp name="Header.value">${WSvar}</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Origin</stringProp>
+              <stringProp name="Header.value">${URLvar}</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Referer</stringProp>
+              <stringProp name="Header.value">${URLvar}/</stringProp>
+            </elementProp>
+          </collectionProp>
+        </HeaderManager>
+        <hashTree/>
+        <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie Manager" enabled="true">
+          <collectionProp name="CookieManager.cookies"/>
+          <boolProp name="CookieManager.clearEachIteration">false</boolProp>
+          <stringProp name="CookieManager.implementation">org.apache.jmeter.protocol.http.control.HC4CookieHandler</stringProp>
+        </CookieManager>
+        <hashTree/>
+        <RecordingController guiclass="RecordController" testclass="RecordingController" testname="ARO-2555" enabled="true"/>
+        <hashTree>
+          <RecordingController guiclass="RecordController" testclass="RecordingController" testname="Auth Service" enabled="true"/>
+          <hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="***${username}*** Login" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">{&quot;password&quot;:&quot;${password}&quot;,&quot;username&quot;:&quot;${username}&quot;}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${WSvar}</stringProp>
+              <stringProp name="HTTPSampler.port"></stringProp>
+              <stringProp name="HTTPSampler.protocol">http</stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">services/auth/v1/login</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion - Authorization set" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="-1004995836">Authorization=</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.test_field">Assertion.response_headers</stringProp>
+                <boolProp name="Assertion.assume_success">false</boolProp>
+                <intProp name="Assertion.test_type">16</intProp>
+              </ResponseAssertion>
+              <hashTree/>
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion - Status 200" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="49586">200</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+                <boolProp name="Assertion.assume_success">false</boolProp>
+                <intProp name="Assertion.test_type">16</intProp>
+              </ResponseAssertion>
+              <hashTree/>
+            </hashTree>
+          </hashTree>
+          <RecordingController guiclass="RecordController" testclass="RecordingController" testname="Account Service" enabled="true"/>
+          <hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="***${username}*** Get accounts list" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value"></stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${WSvar}</stringProp>
+              <stringProp name="HTTPSampler.port"></stringProp>
+              <stringProp name="HTTPSampler.protocol">http</stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">services/accounts-ws/v1/accounts/list</stringProp>
+              <stringProp name="HTTPSampler.method">GET</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion - Status 200" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="49586">200</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+                <boolProp name="Assertion.assume_success">false</boolProp>
+                <intProp name="Assertion.test_type">16</intProp>
+              </ResponseAssertion>
+              <hashTree/>
+            </hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="***${username}*** Get accounts payments eligiblity" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">{&quot;accountTypeProductIds&quot;:[{&quot;prodId&quot;:&quot;501&quot;,&quot;typeId&quot;:&quot;20&quot;},{&quot;prodId&quot;:&quot;502&quot;,&quot;typeId&quot;:&quot;20&quot;},{&quot;prodId&quot;:&quot;499&quot;,&quot;typeId&quot;:&quot;20&quot;},{&quot;prodId&quot;:&quot;412&quot;,&quot;typeId&quot;:&quot;20&quot;},{&quot;prodId&quot;:&quot;547&quot;,&quot;typeId&quot;:&quot;20&quot;},{&quot;prodId&quot;:&quot;26&quot;,&quot;typeId&quot;:&quot;20&quot;},{&quot;prodId&quot;:&quot;504&quot;,&quot;typeId&quot;:&quot;20&quot;},{&quot;prodId&quot;:&quot;546&quot;,&quot;typeId&quot;:&quot;20&quot;},{&quot;prodId&quot;:&quot;21&quot;,&quot;typeId&quot;:&quot;20&quot;},{&quot;prodId&quot;:&quot;4&quot;,&quot;typeId&quot;:&quot;20&quot;},{&quot;prodId&quot;:&quot;288&quot;,&quot;typeId&quot;:&quot;20&quot;},{&quot;prodId&quot;:&quot;142&quot;,&quot;typeId&quot;:&quot;20&quot;},{&quot;prodId&quot;:&quot;54&quot;,&quot;typeId&quot;:&quot;20&quot;},{&quot;prodId&quot;:&quot;62&quot;,&quot;typeId&quot;:&quot;20&quot;},{&quot;prodId&quot;:&quot;11&quot;,&quot;typeId&quot;:&quot;20&quot;},{&quot;prodId&quot;:&quot;801&quot;,&quot;typeId&quot;:&quot;26&quot;},{&quot;prodId&quot;:&quot;809&quot;,&quot;typeId&quot;:&quot;26&quot;},{&quot;prodId&quot;:&quot;808&quot;,&quot;typeId&quot;:&quot;26&quot;},{&quot;prodId&quot;:&quot;547&quot;,&quot;typeId&quot;:&quot;20&quot;},{&quot;prodId&quot;:&quot;546&quot;,&quot;typeId&quot;:&quot;20&quot;},{&quot;prodId&quot;:&quot;26&quot;,&quot;typeId&quot;:&quot;20&quot;},{&quot;prodId&quot;:&quot;4&quot;,&quot;typeId&quot;:&quot;20&quot;},{&quot;prodId&quot;:&quot;62&quot;,&quot;typeId&quot;:&quot;20&quot;},{&quot;prodId&quot;:&quot;21&quot;,&quot;typeId&quot;:&quot;20&quot;},{&quot;prodId&quot;:&quot;11&quot;,&quot;typeId&quot;:&quot;20&quot;},{&quot;prodId&quot;:&quot;801&quot;,&quot;typeId&quot;:&quot;26&quot;},{&quot;prodId&quot;:&quot;808&quot;,&quot;typeId&quot;:&quot;26&quot;},{&quot;prodId&quot;:&quot;420&quot;,&quot;typeId&quot;:&quot;30&quot;},{&quot;prodId&quot;:&quot;229&quot;,&quot;typeId&quot;:&quot;30&quot;},{&quot;prodId&quot;:&quot;421&quot;,&quot;typeId&quot;:&quot;30&quot;},{&quot;prodId&quot;:&quot;130&quot;,&quot;typeId&quot;:&quot;30&quot;},{&quot;prodId&quot;:&quot;128&quot;,&quot;typeId&quot;:&quot;30&quot;},{&quot;prodId&quot;:&quot;228&quot;,&quot;typeId&quot;:&quot;30&quot;},{&quot;prodId&quot;:&quot;132&quot;,&quot;typeId&quot;:&quot;30&quot;},{&quot;prodId&quot;:&quot;129&quot;,&quot;typeId&quot;:&quot;30&quot;},{&quot;prodId&quot;:&quot;581&quot;,&quot;typeId&quot;:&quot;50&quot;},{&quot;prodId&quot;:&quot;620&quot;,&quot;typeId&quot;:&quot;50&quot;},{&quot;prodId&quot;:&quot;622&quot;,&quot;typeId&quot;:&quot;50&quot;}]}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${WSvar}</stringProp>
+              <stringProp name="HTTPSampler.port"></stringProp>
+              <stringProp name="HTTPSampler.protocol">http</stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">services/accounts-ws/v1/accounts/eligible/payment/</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion - Status 200" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="49586">200</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+                <boolProp name="Assertion.assume_success">false</boolProp>
+                <intProp name="Assertion.test_type">16</intProp>
+              </ResponseAssertion>
+              <hashTree/>
+            </hashTree>
+          </hashTree>
+          <RecordingController guiclass="RecordController" testclass="RecordingController" testname="Payments" enabled="true"/>
+          <hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="***${username}*** Get Payment Classification" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">{&#xd;
+	&quot;currency&quot;:&quot;${paymentCurrency}&quot;,&#xd;
+	&quot;fromAccount&quot;:{&quot;currency&quot;:&quot;${paymentCurrency_FROM}&quot;,&quot;iban&quot;:&quot;${paymentIBAN_FROM}&quot;},&#xd;
+	&quot;payee&quot;:{&quot;cif&quot;:&quot;${paymentCif_Payer}&quot;,&quot;fullName&quot;:&quot;${paymentPayerFullName}&quot;},&#xd;
+	&quot;payer&quot;:{&quot;cif&quot;:&quot;${paymentCif_Payer}&quot;,&quot;fullName&quot;:&quot;${paymentPayerFullName}&quot;},&#xd;
+	&quot;toAccount&quot;:{&quot;currency&quot;:&quot;${paymentCurrency_TO}&quot;,&quot;iban&quot;:&quot;${paymentIBAN_TO}&quot;}&#xd;
+	}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${WSvar}</stringProp>
+              <stringProp name="HTTPSampler.port"></stringProp>
+              <stringProp name="HTTPSampler.protocol">http</stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">services/payments-ws/v1/classify-payment</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion - Status 200" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="49586">200</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+                <boolProp name="Assertion.assume_success">false</boolProp>
+                <intProp name="Assertion.test_type">16</intProp>
+              </ResponseAssertion>
+              <hashTree/>
+            </hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="***${username}*** Post Payment" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">{&#xd;
+	&quot;actionId&quot;:&quot;${paymentActionID}&quot;,&#xd;
+	&quot;amount&quot;:${paymentAmount},&#xd;
+	&quot;basic&quot;:{&#xd;
+		&quot;paymentDate&quot;:&quot;${paymentDate}&quot;&#xd;
+		},&#xd;
+		&quot;currency&quot;:&quot;${paymentCurrency}&quot;,&#xd;
+		&quot;details&quot;:[&quot;${paymentDetails}&quot;],&#xd;
+		&quot;fromAccount&quot;:{&#xd;
+			&quot;currency&quot;:&quot;${paymentCurrency_FROM}&quot;,&#xd;
+			&quot;iban&quot;:&quot;${paymentIBAN_FROM}&quot;&#xd;
+			},&#xd;
+		&quot;payee&quot;:{&quot;fullName&quot;:&quot;Cumparaturi&quot;},&#xd;
+		&quot;payer&quot;:{&quot;cif&quot;:&quot;${paymentCif_Payer}&quot;,&quot;fullName&quot;:&quot;${paymentPayerFullName}&quot;},&#xd;
+		&quot;toAccount&quot;:{&#xd;
+			&quot;currency&quot;:&quot;${paymentCurrency_TO}&quot;,&#xd;
+			&quot;iban&quot;:&quot;${paymentIBAN_TO}&quot;&#xd;
+			}&#xd;
+			}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${WSvar}</stringProp>
+              <stringProp name="HTTPSampler.port"></stringProp>
+              <stringProp name="HTTPSampler.protocol">http</stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">services/payments-ws/v1/post-payment</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree/>
+          </hashTree>
+          <RecordingController guiclass="RecordController" testclass="RecordingController" testname="Product Summary" enabled="false"/>
+          <hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="***${username}*** Dashboard - Product Summary" enabled="true">
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+                <collectionProp name="Arguments.arguments"/>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${WSvar}</stringProp>
+              <stringProp name="HTTPSampler.port"></stringProp>
+              <stringProp name="HTTPSampler.protocol">http</stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">portalserver/services/rest/v2/productsummary</stringProp>
+              <stringProp name="HTTPSampler.method">GET</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion - Current accounts displayed" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="-2020533167">&quot;currentAccounts&quot;:{&quot;name&quot;:&quot;Current Account&quot;,&quot;products&quot;:[{&quot;</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                <boolProp name="Assertion.assume_success">false</boolProp>
+                <intProp name="Assertion.test_type">16</intProp>
+              </ResponseAssertion>
+              <hashTree/>
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion - Status 200" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="49586">200</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+                <boolProp name="Assertion.assume_success">false</boolProp>
+                <intProp name="Assertion.test_type">16</intProp>
+              </ResponseAssertion>
+              <hashTree/>
+              <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="accID1" enabled="true">
+                <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                <stringProp name="RegexExtractor.refname">accID1</stringProp>
+                <stringProp name="RegexExtractor.regex">&quot;accountId&quot;:&quot;(.+?)&quot;</stringProp>
+                <stringProp name="RegexExtractor.template">$1$</stringProp>
+                <stringProp name="RegexExtractor.default">0</stringProp>
+                <stringProp name="RegexExtractor.match_number">1</stringProp>
+              </RegexExtractor>
+              <hashTree/>
+              <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="accType1" enabled="true">
+                <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                <stringProp name="RegexExtractor.refname">accType1</stringProp>
+                <stringProp name="RegexExtractor.regex">&quot;accountTypeId&quot;:&quot;(.+?)&quot;</stringProp>
+                <stringProp name="RegexExtractor.template">$1$</stringProp>
+                <stringProp name="RegexExtractor.default">0</stringProp>
+                <stringProp name="RegexExtractor.match_number">1</stringProp>
+              </RegexExtractor>
+              <hashTree/>
+            </hashTree>
+          </hashTree>
+        </hashTree>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>false</threadName>
+              <dataType>false</dataType>
+              <encoding>false</encoding>
+              <assertions>false</assertions>
+              <subresults>true</subresults>
+              <responseData>true</responseData>
+              <samplerData>true</samplerData>
+              <xml>true</xml>
+              <fieldNames>false</fieldNames>
+              <responseHeaders>true</responseHeaders>
+              <requestHeaders>true</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <url>true</url>
+              <fileName>true</fileName>
+              <hostname>true</hostname>
+              <idleTime>true</idleTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>false</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>false</threadName>
+              <dataType>false</dataType>
+              <encoding>false</encoding>
+              <assertions>false</assertions>
+              <subresults>false</subresults>
+              <responseData>true</responseData>
+              <samplerData>false</samplerData>
+              <xml>true</xml>
+              <fieldNames>false</fieldNames>
+              <responseHeaders>true</responseHeaders>
+              <requestHeaders>true</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <url>true</url>
+              <hostname>true</hostname>
+              <idleTime>true</idleTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree - Fails" enabled="true">
+          <boolProp name="ResultCollector.error_logging">true</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>false</threadName>
+              <dataType>false</dataType>
+              <encoding>false</encoding>
+              <assertions>false</assertions>
+              <subresults>false</subresults>
+              <responseData>true</responseData>
+              <samplerData>false</samplerData>
+              <xml>true</xml>
+              <fieldNames>false</fieldNames>
+              <responseHeaders>true</responseHeaders>
+              <requestHeaders>true</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <url>true</url>
+              <hostname>true</hostname>
+              <idleTime>true</idleTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+    <WorkBench guiclass="WorkBenchGui" testclass="WorkBench" testname="WorkBench" enabled="true">
+      <boolProp name="WorkBench.save">true</boolProp>
+    </WorkBench>
+    <hashTree/>
+  </hashTree>
+</jmeterTestPlan>

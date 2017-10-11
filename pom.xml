@@ -1,146 +1,248 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <groupId>com.athena.selenium</groupId>
+    <artifactId>athena-tests</artifactId>
+    <version>1.0-SNAPSHOT</version>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>JavaSeleniumWebdriverScripts-InteliJ</groupId>
-    <artifactId>JavaSeleniumWebdriverScripts-InteliJ</artifactId>
-    <version>1.0</version>
+    <name>Athena Web Test</name>
+
+    <licenses>
+        <license>
+            <name>Apache 2</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+            <comments>A business-friendly OSS license</comments>
+        </license>
+    </licenses>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+        <!--Dependency Versions-->
+        <selenium.version>3.3.1</selenium.version>
+        <hamcrest-all.version>1.3</hamcrest-all.version>
+        <phantomjsdriver.version>1.4.1</phantomjsdriver.version>
+        <testng.version>6.11</testng.version>
+        <!--Plugin Versions-->
+        <driver-binary-downloader-maven-plugin.version>1.0.12</driver-binary-downloader-maven-plugin.version>
+        <maven-compiler-plugin.version>3.6.1</maven-compiler-plugin.version>
+        <maven-failsafe-plugin.version>2.19.1</maven-failsafe-plugin.version>
+        <!--Configuration Properties-->
+        <overwrite.binaries>false</overwrite.binaries>
+        <read.timeout>30000</read.timeout>
+        <connection.timeout>40000</connection.timeout>
+        <retry.attempts>4</retry.attempts>
+        <threads/>
+        <remote>false</remote>
+        <browser/>
+        <seleniumGridURL/>
+        <platform/>
+        <browserVersion/>
+        <proxyEnabled>false</proxyEnabled>
+        <proxyHost/>
+        <proxyPort/>
+    </properties>
 
     <dependencies>
         <dependency>
-            <groupId>org.testng</groupId>
-            <artifactId>testng</artifactId>
-            <version>6.11</version>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest-all</artifactId>
+            <version>${hamcrest-all.version}</version>
         </dependency>
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>3.3.1</version>
+            <version>${selenium.version}</version>
+            <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.github.detro.ghostdriver</groupId>
+                    <artifactId>phantomjsdriver</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.seleniumhq.selenium</groupId>
+                    <artifactId>htmlunit-driver</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/javax/javaee-api -->
         <dependency>
-            <groupId>javax</groupId>
-            <artifactId>javaee-api</artifactId>
-            <version>7.0</version>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-support</artifactId>
+            <version>${selenium.version}</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-remote-driver -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-remote-driver</artifactId>
-            <version>3.3.1</version>
+            <version>${selenium.version}</version>
+            <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.github.detro.ghostdriver</groupId>
+                    <artifactId>phantomjsdriver</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.seleniumhq.selenium</groupId>
+                    <artifactId>htmlunit-driver</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
-            <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-edge-driver</artifactId>
-            <version>3.3.1</version>
+            <groupId>com.codeborne</groupId>
+            <artifactId>phantomjsdriver</artifactId>
+            <version>${phantomjsdriver.version}</version>
+            <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-firefox-driver</artifactId>
-            <version>3.3.1</version>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>${testng.version}</version>
+            <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.11</version>
+            <groupId>com.jayway.restassured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>2.9.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.codehaus.groovy</groupId>
+            <artifactId>groovy-all</artifactId>
+            <version>2.4.7</version>
+        </dependency>
+        <dependency>
+            <groupId>com.jayway.jsonpath</groupId>
+            <artifactId>json-path</artifactId>
+            <version>2.2.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20160810</version>
         </dependency>
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi</artifactId>
-            <version>3.10.1</version>
+            <version>3.9</version>
         </dependency>
         <dependency>
-            <groupId>javax.mail</groupId>
-            <artifactId>javax.mail-api</artifactId>
-            <version>1.5.6</version>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>3.9</version>
         </dependency>
         <dependency>
-            <groupId>com.github.detro</groupId>
-            <artifactId>phantomjsdriver</artifactId>
-            <version>1.2.0</version>
-        </dependency>
-        <dependency>
-            <groupId>com.github.detro.ghostdriver</groupId>
-            <artifactId>phantomjsdriver</artifactId>
-            <version>1.1.0</version>
-        </dependency>
-        <dependency>
-            <groupId>net.anthavio</groupId>
-            <artifactId>phanbedder-1.9.7</artifactId>
-            <version>1.0.0</version>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.17</version>
         </dependency>
     </dependencies>
-    <build>
-        <pluginManagement>
-            <plugins>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-compiler-plugin</artifactId>
-                    <version>2.3.2</version>
-                    <configuration>
-                        <source>1.7</source>
-                        <target>1.7</target>
-                    </configuration>
-                </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-surefire-plugin</artifactId>
-                    <version>2.19</version>
-                    <inherited>true</inherited>
-                    <configuration>
-                        <suiteXmlFiles>
-                            <suiteXmlFile>testng.xml</suiteXmlFile>
-                        </suiteXmlFiles>
-                    </configuration>
-                </plugin>
-                <plugin>
-                    <artifactId>maven-failsafe-plugin</artifactId>
-                    <executions>
-                        <execution>
-                            <goals>
-                                <goal>integration-test</goal>
-                                <goal>verify</goal>
-                            </goals>
-                        </execution>
-                    </executions>
-                </plugin>
-                <plugin>
-                    <groupId>org.codehaus.mojo</groupId>
-                    <artifactId>selenium-maven-plugin</artifactId>
-                    <version>2.3</version>
-                    <executions>
-                        <execution>
-                            <id>xvfb</id>
-                            <phase>pre-integration-test</phase>
-                            <goals>
-                                <goal>xvfb</goal>
-                            </goals>
-                            <configuration>
-                                <display>:1</display>
-                            </configuration>
-                        </execution>
 
-                        <execution>
-                            <id>selenium</id>
-                            <phase>pre-integration-test</phase>
-                            <goals>
-                                <goal>start-server</goal>
-                            </goals>
-                            <configuration>
-                                <background>true</background>
-                            </configuration>
-                        </execution>
-                    </executions>
-                </plugin>
-            </plugins>
-        </pluginManagement>
-    </build>
-    <repositories>
-        <repository>
-            <id>forplay-legacy</id>
-            <url>http://forplay.googlecode.com/svn/mavenrepo</url>
-        </repository>
-    </repositories>
+    <profiles>
+        <profile>
+            <id>Solo</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>com.lazerycode.jmeter</groupId>
+                        <artifactId>jmeter-maven-plugin</artifactId>
+                        <version>2.2.0</version>
+                        <executions>
+                            <execution>
+                                <id>jmeter-tests</id>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>jmeter</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                        <configuration>
+                            <overrideRootLogLevel>debug</overrideRootLogLevel>
+                            <ignoreResultFailures>true</ignoreResultFailures>
+                            <testFilesDirectory>src/test/jmeter</testFilesDirectory>
+                            <resultsFileNameDateFormat>YYY_MM_DD</resultsFileNameDateFormat>
+                            <resultsDirectory>JMeter Scripts/Test_results</resultsDirectory>
+                            <resultsFileFormat>csv</resultsFileFormat>
+                        </configuration>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-compiler-plugin</artifactId>
+                        <configuration>
+                            <source>${java.version}</source>
+                            <target>${java.version}</target>
+                        </configuration>
+                        <version>${maven-compiler-plugin.version}</version>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-failsafe-plugin</artifactId>
+                        <version>${maven-failsafe-plugin.version}</version>
+                        <configuration>
+                            <parallel>methods</parallel>
+                            <threadCount>${threads}</threadCount>
+                            <systemPropertyVariables>
+                                <browser>${browser}</browser>
+                                <screenshotDirectory>${project.build.directory}/screenshots</screenshotDirectory>
+                                <remoteDriver>${remote}</remoteDriver>
+                                <gridURL>${seleniumGridURL}</gridURL>
+                                <desiredPlatform>${platform}</desiredPlatform>
+                                <desiredBrowserVersion>${browserVersion}</desiredBrowserVersion>
+                                <proxyEnabled>${proxyEnabled}</proxyEnabled>
+                                <proxyHost>${proxyHost}</proxyHost>
+                                <proxyPort>${proxyPort}</proxyPort>
+                            </systemPropertyVariables>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <goals>
+                                    <goal>integration-test</goal>
+                                    <!--This goal makes the build fail if you have test failures-->
+                                    <goal>verify</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <version>2.19.1</version>
+                        <configuration>
+                            <parallel>methods</parallel>
+                            <threadCount>${threads}</threadCount>
+                            <systemPropertyVariables>
+                                <browser>${browser}</browser>
+                                <screenshotDirectory>${project.build.directory}/screenshots</screenshotDirectory>
+                                <remoteDriver>${remote}</remoteDriver>
+                                <gridURL>${seleniumGridURL}</gridURL>
+                                <desiredPlatform>${platform}</desiredPlatform>
+                                <desiredBrowserVersion>${browserVersion}</desiredBrowserVersion>
+                                <proxyEnabled>${proxyEnabled}</proxyEnabled>
+                                <proxyHost>${proxyHost}</proxyHost>
+                                <proxyPort>${proxyPort}</proxyPort>
+                            </systemPropertyVariables>
+                            <groups>Solo</groups>
+                            <skipTests>false</skipTests>
+                            <!-- <suiteXmlFiles>
+                                <suiteXmlFile>${project.basedir}\src\test\java\AutomationFramework\Solo.xml</suiteXmlFile>
+                            </suiteXmlFiles> -->
+                        </configuration>
+                        <dependencies>
+                            <dependency>
+                                <groupId>org.apache.maven.surefire</groupId>
+                                <artifactId>surefire-testng</artifactId>
+                                <version>2.17</version>
+                            </dependency>
+                        </dependencies>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 </project>

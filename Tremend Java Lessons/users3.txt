@@ -1,0 +1,3 @@
+id:01|firstName:Petar|lastName:Petrovic|jmbg:1234567890123
+id:02|firstName:Jovan|lastName:Jovanovic|jmbg:1234567890124
+id:03|firstName:Nikola|lastName:Nikolic|jmbg:1234567890125

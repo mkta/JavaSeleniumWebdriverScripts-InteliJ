@@ -1,0 +1,147 @@
+
+Warning-urile indicate de mediul de dezvoltare (IntelliJ, Eclipse ..)
+e recomandat sa fie corectate.
+
+Sfat mai general: e bine ca orice clasa sa apartina de un pachet si
+nu de pachetul default. Asa stau mai bine organizate si nu apar
+conflicte de nume.
+
+Person.java
+cel mai bun practice este ca field-urile (firstName, lastName)
+sa fie private si aiba getter/setters.
+
+Student.java, Professor.java
+field-urile indexNumber, className mai bine private
+
+ReferenceType.java
+field-ul 'xrt' mai bun declarat privat si cu un nume mai sugestiv;
+un nume mai sugestiv pentru metoda 'passMethodrt',
+poate 'methodWithReferenceArg'
+
+Conversions.java
+nume mai sugestive pentru metode ('calvinToFahrenheit' - mai bine nume
+lungi atata timp cat sunt mai descriptive)
+
+JavaTests.java
+nu sunt in regula metode lungi, cu multe linii de cod (cum e in 'main').
+se prefera spargerea unui cod lung in apeluri de metode, pe grupuri
+de interes. de exemplu: typeTests();  printTests();  arrayTests();  samd.
+nicio metoda nu ar trebui sa aiba mai mult de 10-15 randuri de cod.
+
+metoda main are multe variabile declarate insa apoi nefolosite.
+
+a se evita nume de variabile scurte, cu exceptia celor folosite in iteratii (i, j ..)
+un nume trebuie sa explice cat mai clar ce este/face acea variabila.
+
+=====================================================================================
+
+Pachetul Ex
+
+
+numele pachetelor se scriu cu minuscule (ex)
+
+IGeom
+nume nu destul de lamuritor, poate 'IGeometricShape'?
+nu se pastreaza conventia cu interfetele care au nume ce incep cu 'I'
+pentru Operands, Operations din acelasi pachet.
+metodele arie si perimetru mai bine scrise in engleza pentru a intelege oricine.
+
+Quad
+cel mai bun practice (Encapsulation) este ca field-urile (x, y, a)
+sa fie private si sa aiba getter/setters.
+metoda Setxya nu urmeaza conventia camel (setXYA)
+
+Shape
+field-urile nu sunt private iar modul de initializare
+shapePosition = "(" + xShape + "," + yShape + ")" va folosi field-uri neinitializate
+
+Square este ok
+
+Square2 este ok, mai putin numele metodei Setxya ce vine de pe interfata
+
+Circle2
+field cirle2Radius ar merge privat si PI = 3.14 sa fie facut static
+
+nu sunt asa ok denumiri de clase Circle, Circle2. mai bine sa fie descris in nume
+ce au diferit: StaticDataCircle si Circle
+
+recomandare similara si pentru Calc, Calculator si Calculator2
+
+Calc
+String areaType si void calcArea() sunt abordari gresite
+folosind testul shape.getClass() este ok cat timp Circle si Rectangle nu au nimic comun
+
+Produs
+metoda introducereAdaosuri nu face ce ar trebui, ci doar afiseaza lista de adaosuri
+
+Calculator2
+este ok, atata doar ca si field-ul 'double a' trebuia declarat privat, ca si 'b'
+
+Car
+field-urile ar trebui sa apara inaintea constructorilor si ar fi foarte ok sa fie private.
+la constructorul cu mai multe argumente ar merge un this(make, model); la inceput
+
+Server
+declararea enum-ului ServerStatus sta mai bine la inceputul clasei.
+apoi field-urile ar merge ok sa fie private
+variabila 'statusState' are nume redundant, mai bine doar 'status'
+
+L_1, L_2, ...
+fiecare exercitiu cu rezolvarea sa ar putea fi in cate o metoda separata,
+pentru a nu fi main() asa voluminos. main() ar apela aceste metode.
+
+
+L_1
+gresita concatenarea de la randul 80: "Rezultat ex 2: " + a + b
+nu va aduna numerele a si b, le va concatena
+
+L_2
+greseli la adunarea matricilor la randul 106 si 113
+
+L_3
+printare incorecta linia 66 si 68: Rest > 1000 si Rest < 1000
+
+L_4
+pt cerinta de la linia 75, ar fi fost interesant sa se calculeze
+ariile folosindu-se asa numitele metode virtuale.
+clasa Shape sa aiba metoda computeArea()
+apoi clasele Circle, Square si Rectangle sa aiba fiecare
+metodele computeArea() proprii, anotate cu @Override pt claritate.
+un exemplu de apel de metoda virtuala:
+Shape c = new Circle();
+c.computeArea(); // desi c are tipul Shape, instanta este tip Circle, se va apela metoda din Circle
+
+L_4 cerinta de la linia 102: nu e respectat faptul ca
+Pizza şi Sendviş necesită în constructor numele şi preţul produsului.
+metoda de introducereAdaos care introduce adaosul pentru produs nu este
+corect implementata. ar fi ok un singur parametru String care se va adauga la adaosuri[].
+
+L_5
+e ok, mai putin 'Id' din clasa User, ar merge cu litere mici: 'id'
+sau si mai bine, sa fie obtinut cu getId()
+la linia 192, pentru sortare ar fi mers:
+for (int au = ui+1;  ..   pentru ca nu are rost sa compari un user cu el insusi.
+ar fi mers si niste nume de variabile mai lungi/sugestive
+
+L_6
+este bun practice la if then else-uri sa fie pusa ramura 'pozitiva' a if-ului drept prima.
+mai exact ramura if-ului pe unde se intra cel mai des sa fie prima:
+if (!firstName.equals("")) { //cel mai probabil numele nu va fi vid
+    this.firstName = firstName;
+} else {
+    throw new InvalidFirstNameException();
+}
+astfel se evita overhead, chiar daca infim.
+
+L_7
+linia 51,52: nu prea merge zis la variabila aia 'filesToRead' pentru ca sunt defapt obiecte Reader,
+mai bine merge spus 'bufferedReaders' sau 'readers'.
+la linia 56: nu bufferReader.close(); (bufferReader este de la exercitiul de mai sus)
+corect e bufferReader2.close();
+
+User3
+in engleza cred ca e serialize si deserialize.
+dar bun exemplu de clasa bine incapsulata, cu field-uri private accesibile controlat
+
+ultimul exercitiu din L_7, mi se pare ca se poate muta un fisier si in moduri mai simple:
+https://stackoverflow.com/questions/4645242/how-to-move-file-from-one-location-to-another-location-in-java

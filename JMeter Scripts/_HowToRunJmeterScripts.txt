@@ -1,0 +1,24 @@
+1. Have jmeter installed
+2. Have JMETER_HOME system variable defined
+3. Have intellij jmter plugin installed
+4. Right click on the script and run
+
+*******WITH GUI*******
+1. Right click on the script and run
+2. Jmeter will open, press run and watch results tree
+
+*******WITHOUT GUI*******
+1.Copy test file .jmx from JMeter Scripts to src\test\jmeter
+2.Open terminal
+3."mvn verify" OR maven."mvn verify -Dtest.skip=true" to skip tests
+4.wait
+5.results will located at /JMeter Scripts/Test_results/testname.jtt/csv
+
+How to Fix: 
+
+WARNING: Could not open/create prefs root node Software\JavaSoft\Prefs at root 0x80000002. Windows RegCreateKeyEx(...) returned error code 5.
+
+"1. Go into your Start Menu and type regedit into the search field.
+2. Navigate to path HKEY_LOCAL_MACHINE\Software\JavaSoft (Windows 10 seems to now have this here: HKEY_LOCAL_MACHINE\Software\WOW6432Node\JavaSoft)
+3. Right click on the JavaSoft folder and click on New -> Key
+4. Name the new Key "Prefs" and everything should work.

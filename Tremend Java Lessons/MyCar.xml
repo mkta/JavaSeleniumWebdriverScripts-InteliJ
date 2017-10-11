@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.8.0_141" class="java.beans.XMLDecoder">
+ <object class="Car">
+  <void property="id">
+   <int>10</int>
+  </void>
+  <void property="maximumSpeed">
+   <double>270.0</double>
+  </void>
+  <void property="model">
+   <string>Audi A8</string>
+  </void>
+ </object>
+</java>
